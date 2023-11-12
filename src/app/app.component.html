@@ -1,0 +1,8 @@
+<div *ngFor="let location of locations">
+  <div ngx-sortablejs [sortablejsOptions]="sortableOptions">
+    {{ location.name }}
+    <div *ngIf="location.subLocations.length > 0">
+      <app-locations [locations]="location.subLocations"></app-locations>
+    </div>
+  </div>
+</div>
